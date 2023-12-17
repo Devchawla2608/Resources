@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+  <script>
+    // start with strings, numbers and booleans
+
+    let age = 100;
+    let age2 = age;
+    console.log(age , age2)
+    age = 200
+    console.log(age , age2)
+    let name = 'Wes';
+    let name2 = name
+    console.log(name , name2)
+    name = 'Wesley';
+    console.log(name , name2)
+    // Let's say we have an array
+    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+    // and we want to make a copy of it.
+    const team = players
+    // You might think we can just do something like this:
+    team[3] = 'lux'
+    console.log(players)
+    console.log(team)
+
+
+    const team2 = players.slice()
+
+    const team3 = [].concat(players);
+
+    const team4 = [...players];
+
+    const team5 = Array.from(players)
+
+
+    // with Objects
+    const person = {
+      name: 'Wes Bos',
+      age: 80
+    };
+
+    const captain = person;
+    captain.number = 99
+
+    // How to make copy of object
+    const cap2 = Object.assign({} , person , {number:99})
+    console.log(cap2)
+    console.log(person)
+
+
+    // Object spread
+    const cap3 = {...person}
+
+    const wes = {
+        name:'Wes',
+        age:100,
+        social:{
+            twitter:"wes@123",
+            facebook:'wesbos'
+        }
+    }
+
+    const dev = Object.assign({} , wes);
+    // Object.assign does only go one level down
+
+    //right way to do
+    const dev2 = JSON.parse(JSON.stringify(wes))
+
+
+
+  </script>
+
+</body>
+</html>

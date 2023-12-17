@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(8, 8, 8);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1,200px);
+    grid-template-rows: repeat(4,200px);
+    padding: 4rem;
+
+    /* To apply on all the items */
+    /* justify-items: end;
+    align-items: end; */
+    place-items: center;
+}
+.item{
+    height:100px;
+    width: 100px;
+    background-color: rgb(121, 152, 152);
+    border: 2px solid black;
+
+    /* To align content */
+    justify-self: start;
+    /* X axis */
+    
+    /* if we apply strecth then items will take all the width if we didn't mentioned till now*/
+    align-self: end;
+    /* y axis */
+
+    /* align-self + justify-self = place self  */
+}
