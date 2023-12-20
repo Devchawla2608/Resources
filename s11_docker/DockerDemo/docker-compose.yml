@@ -1,0 +1,15 @@
+# version:'3.8'
+
+# services:
+#   postgres:
+#   image:postgres
+#   ports:
+#   - '455454'
+
+#   enviroment:
+
+
+#   redis:
+#   image:redis
+#   ports:
+#   - "6347:6379"
